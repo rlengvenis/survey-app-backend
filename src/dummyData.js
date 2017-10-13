@@ -1,19 +1,34 @@
-import User from './models/user';
+import Survey from './models/survey';
 
 export default () => {
-  User.count().exec((err, count) => {
+  Survey.count().exec((err, count) => {
     if (count > 0) {
       return;
     }
 
-    const user1 = new User({
-      name: 'Admin'
-    });
-    const user2 = new User({
-      name: 'Admin'
-    });
+    const data = {
+      name: 'Apklausa',
+      description: 'Apie save patį',
+      questions: [{
+        title: 'Kokia mano lytis?',
+        type: 1,
+        optionIds: []
+      }, {
+        title: 'Kiek man metų?',
+        type: 3,
+        options: [{
+          title: '2 metai'
+        }, {
+          title: '3 metai'
+        }],
+        answer: {
+          text: 'Vyras'
+        }
+      }]
+    };
 
-    User.create([user1, user2], (error) => {
+    Survey.create(data, (error) => {
+      console.log('error', error);
       if (!error) {
         console.log('ready to go....');
       }

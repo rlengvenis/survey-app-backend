@@ -1,19 +1,14 @@
-import User from '../models/user';
+import Survey from '../models/survey';
 import cuid from 'cuid';
 import sanitizeHtml from 'sanitize-html';
 
-/**
- * Get all posts
- * @param req
- * @param res
- * @returns void
- */
-export function getUsers(req, res) {
-  User.find().exec((err, users) => {
+
+export function getSurvey(req, res) {
+  Survey.find().exec((err, survey) => {
     if (err) {
       res.status(500).send(err);
     }
-    res.json({users});
+    res.json({survey});
   });
 }
 
@@ -28,7 +23,7 @@ export function addUser(req, res) {
     res.status(403).end();
   }
 
-  const newUser = new User(req.body.user);
+  const newUser = new Survey(req.body.user);
 
   // Let's sanitize inputs
   newUser.id = sanitizeHtml(newUser.id);

@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 import mongoose from 'mongoose';
 
 import index from './routes/index';
-import users from './routes/users';
+import users from './routes/survey';
 import dummyData from './dummyData';
 import serverConfig from './config';
 
