@@ -12,18 +12,18 @@ export default () => {
       questions: [{
         title: 'Kokia mano lytis?',
         type: 1,
-        optionIds: []
+        options: []
       }, {
         title: 'Kiek man metų?',
         type: 3,
-        options: [{
+        answerOptions: [{
           title: '2 metai'
         }, {
           title: '3 metai'
         }],
-        answer: {
+        answers: [{
           text: 'Vyras'
-        }
+        }]
       }]
     };
 

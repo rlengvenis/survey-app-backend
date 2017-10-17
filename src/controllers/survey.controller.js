@@ -4,12 +4,13 @@ import sanitizeHtml from 'sanitize-html';
 
 
 export function getSurvey(req, res) {
-  Survey.find().exec((err, survey) => {
-    if (err) {
+  Survey.find()
+    .then((survey) => {
+      res.json({survey: survey[0]});
+    })
+    .catch((err) => {
       res.status(500).send(err);
-    }
-    res.json({survey});
-  });
+    });
 }
 
 /**
@@ -18,23 +19,20 @@ export function getSurvey(req, res) {
  * @param res
  * @returns void
  */
-export function addUser(req, res) {
-  if (!req.body.user.id || !req.body.user.username) {
+export function addOrUpdateSurvey(req, res) {
+  const {survey} = req.body;
+
+  if (!survey) {
     res.status(403).end();
   }
 
-  const newUser = new Survey(req.body.user);
+  const newOrModifiedSurvey = new Survey(survey);
 
-  // Let's sanitize inputs
-  newUser.id = sanitizeHtml(newUser.id);
-  newUser.username = sanitizeHtml(newUser.username);
-
-  newUser.cuid = cuid();
-  newUser.save((err, saved) => {
-    if (err) {
-      res.status(500).send(err);
-    }
-    res.json({user: saved});
-  });
+  Survey.findOneAndUpdate({_id: survey._id}, survey, {upsert: true})
+    .then((result) => {
+      return res.send("Succesfully saved");
+    })
+    .catch((err) => {
+      return res.send(500, {error: err});
+    });
 }
-
