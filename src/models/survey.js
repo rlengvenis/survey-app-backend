@@ -20,7 +20,7 @@ const survey = new Schema({
       ],
       answers: [{
         _id: {type: String, default: uuid.v1},
-        text: {type: 'String', required: true},
+        answerText: {type: 'String', required: true},
         required: false
       }]
     }

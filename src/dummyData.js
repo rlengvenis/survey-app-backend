@@ -22,7 +22,7 @@ export default () => {
           title: '3 metai'
         }],
         answers: [{
-          text: 'Vyras'
+          answerText: 'Vyras'
         }]
       }]
     };
