@@ -1,4 +1,4 @@
-import { Router } from 'express';
+import {Router} from 'express';
 import passport from 'passport';
 import * as SurveyController from '../controllers/survey.controller';
 
