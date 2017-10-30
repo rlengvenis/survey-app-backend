@@ -1,4 +1,4 @@
-import Survey from './models/survey';
+import Survey from '../models/survey';
 
 export default () => {
   Survey.count().exec((err, count) => {

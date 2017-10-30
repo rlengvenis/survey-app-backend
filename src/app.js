@@ -7,15 +7,23 @@ var bodyParser = require('body-parser');
 import mongoose from 'mongoose';
 
 import index from './routes/index';
+import auth from './routes/auth';
 import users from './routes/survey';
-import dummyData from './dummyData';
-import serverConfig from './config';
+
+import dummyData from './config/dummyData';
+import databaseConfig from './config/database';
+
+import passport from  'passport';
+import {jwtLogin, localLogin} from './config/passport';
+
+passport.use(jwtLogin);
+passport.use(localLogin);
 
 // Set native promises as mongoose promise
 mongoose.Promise = global.Promise;
 
 // MongoDB Connection
-mongoose.connect(serverConfig.mongoURL, (error) => {
+mongoose.connect(databaseConfig.mongoURL, (error) => {
   if (error) {
     console.error('Please make sure Mongodb is installed and running!'); // eslint-disable-line no-console
     throw error;
@@ -41,7 +49,9 @@ app.use(bodyParser.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/api', index);
+app.use('/', index);
+app.use('/', auth);
+app.use('/api', passport.authenticate('jwt', {session: false}));
 app.use('/api', users);
 
 // catch 404 and forward to error handler
