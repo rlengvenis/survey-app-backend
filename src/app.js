@@ -12,7 +12,7 @@ import {jwtLogin, localLogin} from './config/passport';
 
 import index from './routes/index';
 import auth from './routes/auth';
-import users from './routes/survey';
+import survey from './routes/survey';
 
 
 // Set native promises as mongoose promise
@@ -49,7 +49,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/', auth);
 app.use('/api', passport.authenticate('jwt', {session: false}));
-app.use('/api', users);
+app.use('/api', survey);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

@@ -3,6 +3,7 @@ import {JWT_SECRET} from '../config/passport';
 import User from '../models/user';
 
 const tokenForUser = (user) => {
+  console.log(user._id);
   return jwt.encode({
     sub: user._id,
     iat: new Date().getTime()

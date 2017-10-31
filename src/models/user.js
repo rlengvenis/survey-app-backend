@@ -12,21 +12,19 @@ const userSchema = new Schema({
   password: String
 });
 
-userSchema.pre('save', function (next) {
+userSchema.pre('save', async function (next) {
   const user = this;
 
-  (async () => {
-    try {
-      const salt = await bcrypt.genSaltAsync(10);
-      const hash = await bcrypt.hashAsync(user.password, salt, null);
+  try {
+    const salt = await bcrypt.genSaltAsync(10);
+    const hash = await bcrypt.hashAsync(user.password, salt, null);
 
-      user.password = hash;
-      next();
+    user.password = hash;
+    next();
 
-    } catch (err) {
-      next(err)
-    }
-  })();
+  } catch (err) {
+    next(err)
+  }
 });
 
 userSchema.methods.comparePasswords = function (candidatePassword) {
