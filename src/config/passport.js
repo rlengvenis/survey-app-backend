@@ -13,15 +13,19 @@ export const localLogin = new LocalStrategy({
   async (email, password, done) => {
     try {
       const user = await User.findOne({email});
-      const isMatch = await user.comparePasswords(password);
 
-      if (!isMatch) {
-        return done(null, false)
+      if (user) {
+        const isMatch = await user.comparePasswords(password);
+
+        if (isMatch) {
+          done(null, user);
+        }
       }
 
-      done(null, user)
+      return done(null, false);
 
     } catch (err) {
+      console.log(err);
       done(err);
     }
   });
@@ -41,6 +45,7 @@ export const jwtLogin = new Strategy({
       }
 
     } catch (err) {
+      console.log(err);
       done(err, false);
     }
   });
