@@ -7,8 +7,6 @@ import dummyData from './config/dummyData';
 import databaseConfig from './config/database';
 
 import bodyParser from 'body-parser';
-import passport from 'passport';
-import {jwtLogin, localLogin} from './config/passport';
 import cors from 'cors';
 
 import index from './routes/index';
@@ -30,10 +28,6 @@ mongoose.connect(databaseConfig.mongoURL, (error) => {
   dummyData();
 });
 
-// Set up passport with strategies
-passport.use(jwtLogin);
-passport.use(localLogin);
-
 const app = express();
 
 // view engine setup
@@ -49,7 +43,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/api', auth);
-// app.use('/api', passport.authenticate('jwt', {session: false}));
 app.use('/api', survey);
 
 // catch 404 and forward to error handler

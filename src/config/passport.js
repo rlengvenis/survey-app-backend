@@ -50,3 +50,8 @@ export const jwtLogin = new Strategy({
     }
   });
 
+passport.use(jwtLogin);
+passport.use(localLogin);
+
+
+export default passport;

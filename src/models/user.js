@@ -2,24 +2,22 @@ import mongoose from 'mongoose';
 import bcrypt from 'bcrypt-nodejs';
 import Promise from 'bluebird';
 
+
 Promise.promisifyAll(bcrypt);
 
 const Schema = mongoose.Schema;
-
 
 const userSchema = new Schema({
   email: {type: String, unique: true, lowercase: true},
   password: String
 });
 
-userSchema.pre('save', async function (next) {
-  const user = this;
-
+userSchema.pre('save', async function(next) {
   try {
     const salt = await bcrypt.genSaltAsync(10);
-    const hash = await bcrypt.hashAsync(user.password, salt, null);
+    const hash = await bcrypt.hashAsync(this.password, salt, null);
 
-    user.password = hash;
+    this.password = hash;
     next();
 
   } catch (err) {

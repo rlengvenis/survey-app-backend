@@ -1,11 +1,14 @@
 import {Router} from 'express';
-import passport from 'passport';
+import passport from '../config/passport';
 import * as SurveyController from '../controllers/survey.controller';
+
 
 const router = new Router();
 
+const jwtAuthMiddleware = passport.authenticate('jwt', {session: false});
 
-router.route('/survey').get(SurveyController.getSurvey);
-router.route('/survey').put(SurveyController.addOrUpdateSurvey);
+router.route('/survey').get(jwtAuthMiddleware, SurveyController.getSurvey);
+router.route('/survey').put(jwtAuthMiddleware, SurveyController.addOrUpdateSurvey);
+
 
 export default router;
