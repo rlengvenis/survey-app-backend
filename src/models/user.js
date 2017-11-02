@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 import bcrypt from 'bcrypt-nodejs';
 import Promise from 'bluebird';
+import uuid from 'uuid';
 
 
 Promise.promisifyAll(bcrypt);
@@ -8,6 +9,7 @@ Promise.promisifyAll(bcrypt);
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
+  _id: {type: String, default: uuid.v1},
   email: {type: String, unique: true, lowercase: true},
   password: String
 });

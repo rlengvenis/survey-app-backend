@@ -5,6 +5,7 @@ const Schema = mongoose.Schema;
 
 const survey = new Schema({
   _id: {type: String, default: uuid.v1},
+  userId: {type: String, required: false, ref: 'User'},
   name: {type: String, required: true},
   description: {type: String, required: true},
   questions: [

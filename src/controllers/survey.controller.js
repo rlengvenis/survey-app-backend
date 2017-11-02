@@ -2,24 +2,27 @@ import Survey from '../models/survey';
 
 export const getSurvey = async (req, res) => {
   try {
-    const survey = await Survey.find();
-    res.json({survey: survey[0]});
+    const {user} = req;
+
+    const survey = await Survey.findOne({userId: user._id});
+    res.json({survey: survey});
 
   } catch (err) {
     res.status(500).send(err);
   }
 };
 
-export const addOrUpdateSurvey = async (req, res) => {
+export const insertOrUpdateSurvey = async (req, res) => {
   try {
-    const {survey} = req.body;
+    const {user, body: {survey}} = req;
 
     if (!survey) {
       res.status(403).end();
     }
 
-    const newOrModifiedSurvey = new Survey(survey);
-    await Survey.findOneAndUpdate({_id: survey._id}, survey, {upsert: true});
+    const surveyWithUserId = Object.assign({}, survey, {userId: user._id});
+    await Survey.findOneAndUpdate({_id: survey._id}, surveyWithUserId, {upsert: true});
+
     return res.send("Succesfully saved");
 
   } catch (err) {
