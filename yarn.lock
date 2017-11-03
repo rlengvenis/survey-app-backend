@@ -34,6 +34,14 @@ ajv@^4.9.1:
     co "^4.6.0"
     json-stable-stringify "^1.0.1"
 
+align-text@^0.1.1, align-text@^0.1.3:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/align-text/-/align-text-0.1.4.tgz#0cd90a561093f35d0a99256c22b7069433fad117"
+  dependencies:
+    kind-of "^3.0.2"
+    longest "^1.0.1"
+    repeat-string "^1.5.2"
+
 amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
@@ -62,6 +70,13 @@ ansi-styles@^3.1.0:
   dependencies:
     color-convert "^1.9.0"
 
+any@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/any/-/any-1.0.0.tgz#0a7b348c589faf6ba708d4a2241069ea51628b5e"
+  dependencies:
+    for-own "^0.1.2"
+    make-iterator "^0.1.0"
+
 anymatch@^1.3.0:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/anymatch/-/anymatch-1.3.2.tgz#553dcb8f91e3c889845dfdba34c77721b90b9d7a"
@@ -80,6 +95,13 @@ are-we-there-yet@~1.1.2:
     delegates "^1.0.0"
     readable-stream "^2.0.6"
 
+arr-diff@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/arr-diff/-/arr-diff-1.1.0.tgz#687c32758163588fef7de7b36fabe495eb1a399a"
+  dependencies:
+    arr-flatten "^1.0.1"
+    array-slice "^0.2.3"
+
 arr-diff@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/arr-diff/-/arr-diff-2.0.0.tgz#8f3b827f955a8bd669697e4a4256ac3ceae356cf"
@@ -90,9 +112,27 @@ arr-flatten@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/arr-flatten/-/arr-flatten-1.1.0.tgz#36048bbff4e7b47e136644316c99669ea5ae91f1"
 
+arr-map@^2.0.0:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/arr-map/-/arr-map-2.0.2.tgz#3a77345ffc1cf35e2a91825601f9e58f2e24cac4"
+  dependencies:
+    make-iterator "^1.0.0"
+
+arr-union@^3.0.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/arr-union/-/arr-union-3.1.0.tgz#e39b09aea9def866a8f206e288af63919bae39c4"
+
+array-each@^0.1.0, array-each@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/array-each/-/array-each-0.1.1.tgz#c5d52ba8225f36d728178ba7aec413acfaddd0f9"
+
 array-flatten@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/array-flatten/-/array-flatten-1.1.1.tgz#9a5f699051b1e7073328f2a008968b64ea2955d2"
+
+array-slice@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/array-slice/-/array-slice-0.2.3.tgz#dd3cfb80ed7973a75117cdac69b0b99ec86186f5"
 
 array-unique@^0.2.1:
   version "0.2.1"
@@ -257,10 +297,6 @@ babel-plugin-syntax-async-functions@^6.8.0:
 babel-plugin-syntax-exponentiation-operator@^6.8.0:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-exponentiation-operator/-/babel-plugin-syntax-exponentiation-operator-6.13.0.tgz#9ee7e8337290da95288201a6a57f4170317830de"
-
-babel-plugin-syntax-object-rest-spread@^6.8.0:
-  version "6.13.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-syntax-object-rest-spread/-/babel-plugin-syntax-object-rest-spread-6.13.0.tgz#fd6536f2bce13836ffa3a5458c4903a597bb3bf5"
 
 babel-plugin-syntax-trailing-function-commas@^6.22.0:
   version "6.22.0"
@@ -449,13 +485,6 @@ babel-plugin-transform-exponentiation-operator@^6.22.0:
     babel-helper-builder-binary-assignment-operator-visitor "^6.24.1"
     babel-plugin-syntax-exponentiation-operator "^6.8.0"
     babel-runtime "^6.22.0"
-
-babel-plugin-transform-object-rest-spread@^6.26.0:
-  version "6.26.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-object-rest-spread/-/babel-plugin-transform-object-rest-spread-6.26.0.tgz#0f36692d50fef6b7e2d4b3ac1478137a963b7b06"
-  dependencies:
-    babel-plugin-syntax-object-rest-spread "^6.8.0"
-    babel-runtime "^6.26.0"
 
 babel-plugin-transform-regenerator@^6.22.0:
   version "6.26.0"
@@ -677,6 +706,13 @@ capture-stack-trace@^1.0.0:
 caseless@~0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
+
+center-align@^0.1.1:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/center-align/-/center-align-0.1.3.tgz#aa0d32629b6ee972200411cbd4461c907bc2b7ad"
+  dependencies:
+    align-text "^0.1.3"
+    lazy-cache "^1.0.3"
 
 chalk@^1.1.3:
   version "1.1.3"
@@ -1037,6 +1073,16 @@ expand-range@^1.8.1:
   dependencies:
     fill-range "^2.1.0"
 
+export-dirs@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/export-dirs/-/export-dirs-0.2.4.tgz#2e16b9b46ebc2c07acb657ccdfbe3845393fe742"
+
+export-files@^2.1.0:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/export-files/-/export-files-2.1.1.tgz#bbf64574053a09e4eb98e5f43501d572b2c3ce7f"
+  dependencies:
+    lazy-cache "^1.0.3"
+
 express@~4.15.5:
   version "4.15.5"
   resolved "https://registry.yarnpkg.com/express/-/express-4.15.5.tgz#670235ca9598890a5ae8170b83db722b842ed927"
@@ -1110,11 +1156,15 @@ finalhandler@~1.0.6:
     statuses "~1.3.1"
     unpipe "~1.0.0"
 
+for-in@^0.1.4:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/for-in/-/for-in-0.1.8.tgz#d8773908e31256109952b1fdb9b3fa867d2775e1"
+
 for-in@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"
 
-for-own@^0.1.4:
+for-own@^0.1.1, for-own@^0.1.2, for-own@^0.1.3, for-own@^0.1.4:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/for-own/-/for-own-0.1.5.tgz#5265c681a4f294dabbf17c9509b6763aa84510ce"
   dependencies:
@@ -1278,6 +1328,10 @@ has-unicode@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/has-unicode/-/has-unicode-2.0.1.tgz#e0e6fe6a28cf51138855e086d1691e771de2a8b9"
 
+has-values@^0.1.3:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/has-values/-/has-values-0.1.4.tgz#6d61de95d91dfca9b9a02089ad384bff8f62b771"
+
 hawk@3.1.3, hawk@~3.1.3:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/hawk/-/hawk-3.1.3.tgz#078444bd7c1640b0fe540d2c9b73d59678e8e1c4"
@@ -1331,6 +1385,12 @@ ignore-by-default@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/ignore-by-default/-/ignore-by-default-1.0.1.tgz#48ca6d72f6c6a3af00a9ad4ae6876be3889e2b09"
 
+immutability-helper@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/immutability-helper/-/immutability-helper-2.4.0.tgz#00d421e2957c17f0f0781475f05ffd837e73458d"
+  dependencies:
+    invariant "^2.2.0"
+
 import-lazy@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/import-lazy/-/import-lazy-2.1.0.tgz#05698e3d45c88e8d7e9d92cb0584e77f096f3e43"
@@ -1354,7 +1414,7 @@ ini@^1.3.4, ini@~1.3.0:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.4.tgz#0537cb79daf59b59a1a517dff706c86ec039162e"
 
-invariant@^2.2.2:
+invariant@^2.2.0, invariant@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.2.tgz#9e1f56ac0acdb6bf303306f338be3b204ae60360"
   dependencies:
@@ -1370,7 +1430,7 @@ is-binary-path@^1.0.0:
   dependencies:
     binary-extensions "^1.0.0"
 
-is-buffer@^1.1.5:
+is-buffer@^1.0.2, is-buffer@^1.1.5:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
 
@@ -1419,7 +1479,7 @@ is-npm@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-npm/-/is-npm-1.0.0.tgz#f2fb63a65e4905b406c86072765a1a4dc793b9f4"
 
-is-number@^2.1.0:
+is-number@^2.0.2, is-number@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/is-number/-/is-number-2.1.0.tgz#01fcbbb393463a548f2f466cce16dece49db908f"
   dependencies:
@@ -1440,6 +1500,12 @@ is-path-inside@^1.0.0:
   resolved "https://registry.yarnpkg.com/is-path-inside/-/is-path-inside-1.0.0.tgz#fc06e5a1683fbda13de667aff717bbc10a48f37f"
   dependencies:
     path-is-inside "^1.0.1"
+
+is-plain-object@^2.0.1:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/is-plain-object/-/is-plain-object-2.0.4.tgz#2c163b3fafb1b606d9d17928f05c2a1c38e07677"
+  dependencies:
+    isobject "^3.0.1"
 
 is-posix-bracket@^0.1.0:
   version "0.1.1"
@@ -1485,11 +1551,19 @@ isexe@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
 
+isobject@^1.0.0:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/isobject/-/isobject-1.0.2.tgz#f0f9b8ce92dd540fa0740882e3835a2e022ec78a"
+
 isobject@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-2.1.0.tgz#f065561096a3f1da2ef46272f815c840d87e0c89"
   dependencies:
     isarray "1.0.0"
+
+isobject@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
 
 isstream@~0.1.2:
   version "0.1.2"
@@ -1599,7 +1673,13 @@ kareem@1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/kareem/-/kareem-1.5.0.tgz#e3e4101d9dcfde299769daf4b4db64d895d17448"
 
-kind-of@^3.0.2:
+kind-of@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-2.0.1.tgz#018ec7a4ce7e3a86cb9141be519d24c8faa981b5"
+  dependencies:
+    is-buffer "^1.0.2"
+
+kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^3.1.0:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-3.2.2.tgz#31ea21a734bab9bbb0f32466d893aea51e4a3c64"
   dependencies:
@@ -1616,6 +1696,10 @@ latest-version@^3.0.0:
   resolved "https://registry.yarnpkg.com/latest-version/-/latest-version-3.1.0.tgz#a205383fea322b33b5ae3b18abee0dc2f356ee15"
   dependencies:
     package-json "^4.0.0"
+
+lazy-cache@^1.0.3:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/lazy-cache/-/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"
 
 lodash._baseassign@^3.0.0:
   version "3.2.0"
@@ -1691,6 +1775,10 @@ lodash@^4.14.0, lodash@^4.17.4:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
+longest@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/longest/-/longest-1.0.1.tgz#30a0b2da38f73770e8294a0d22e6625ed77d0097"
+
 loose-envify@^1.0.0:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.3.1.tgz#d1a8ad33fa9ce0e713d65fdd0ac8b748d478c848"
@@ -1713,6 +1801,24 @@ make-dir@^1.0.0:
   resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-1.1.0.tgz#19b4369fe48c116f53c2af95ad102c0e39e85d51"
   dependencies:
     pify "^3.0.0"
+
+make-iterator@^0.1.0:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/make-iterator/-/make-iterator-0.1.1.tgz#873d27b8198a465a81483b6f5d16da4e863ecf5b"
+  dependencies:
+    for-own "^0.1.1"
+
+make-iterator@^0.2.0:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/make-iterator/-/make-iterator-0.2.1.tgz#a19c660132b54ae6d64f881ec14056c746dbe972"
+  dependencies:
+    kind-of "^3.0.3"
+
+make-iterator@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/make-iterator/-/make-iterator-1.0.0.tgz#57bef5dc85d23923ba23767324d8e8f8f3d9694b"
+  dependencies:
+    kind-of "^3.1.0"
 
 map-stream@~0.1.0:
   version "0.1.0"
@@ -1941,12 +2047,40 @@ object-assign@^4, object-assign@^4.1.0:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
 
+object.defaults@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/object.defaults/-/object.defaults-0.3.0.tgz#b1eb9cbc78c4c7bd56cac6cae3dead5a7113882a"
+  dependencies:
+    array-each "^0.1.0"
+    array-slice "^0.2.3"
+    for-own "^0.1.3"
+    isobject "^1.0.0"
+
+object.filter@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/object.filter/-/object.filter-0.3.0.tgz#1091c69394b44f96d9d6356dd08785028ad6bff9"
+  dependencies:
+    for-own "^0.1.2"
+    make-iterator "^0.1.0"
+
 object.omit@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/object.omit/-/object.omit-2.0.1.tgz#1a9c744829f39dbb858c76ca3579ae2a54ebd1fa"
   dependencies:
     for-own "^0.1.4"
     is-extendable "^0.1.1"
+
+object.pick@^1.1.1:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/object.pick/-/object.pick-1.3.0.tgz#87a10ac4c1694bd2e1cbf53591a66141fb5dd747"
+  dependencies:
+    isobject "^3.0.1"
+
+object.reduce@^0.1.7:
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/object.reduce/-/object.reduce-0.1.7.tgz#d180e84f72d218348af45352b55165246b95046d"
+  dependencies:
+    for-own "^0.1.3"
 
 on-finished@~2.3.0:
   version "2.3.0"
@@ -2291,6 +2425,12 @@ resolve-from@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/resolve-from/-/resolve-from-2.0.0.tgz#9480ab20e94ffa1d9e80a804c7ea147611966b57"
 
+right-align@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/right-align/-/right-align-0.1.3.tgz#61339b722fe6a3515689210d24e14c96148613ef"
+  dependencies:
+    align-text "^0.1.1"
+
 rimraf@2, rimraf@^2.5.1, rimraf@^2.6.1:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.2.tgz#2ed8150d24a16ea8651e6d6ef0f47c4158ce7a36"
@@ -2483,6 +2623,10 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
+striptags@^2.0.3:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/striptags/-/striptags-2.2.1.tgz#4c450b708d41b8bf39cf24c49ff234fc6aabfd32"
+
 supports-color@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"
@@ -2632,6 +2776,37 @@ utils-merge@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.0.tgz#0294fb922bb9375153541c4f7096231f287c8af8"
 
+utils@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/utils/-/utils-0.3.1.tgz#04efaeb4290a67037a4cddfd2ff56144cc3a4581"
+  dependencies:
+    any "^1.0.0"
+    arr-diff "^1.1.0"
+    arr-flatten "^1.0.1"
+    arr-map "^2.0.0"
+    arr-union "^3.0.0"
+    array-each "^0.1.1"
+    array-slice "^0.2.3"
+    array-unique "^0.2.1"
+    center-align "^0.1.1"
+    export-dirs "^0.2.4"
+    export-files "^2.1.0"
+    for-in "^0.1.4"
+    for-own "^0.1.3"
+    has-values "^0.1.3"
+    is-number "^2.0.2"
+    is-plain-object "^2.0.1"
+    kind-of "^2.0.1"
+    make-iterator "^0.2.0"
+    object.defaults "^0.3.0"
+    object.filter "^0.3.0"
+    object.omit "^2.0.0"
+    object.pick "^1.1.1"
+    object.reduce "^0.1.7"
+    right-align "^0.1.3"
+    striptags "^2.0.3"
+    word-wrap "^1.1.0"
+
 uuid@^3.0.0, uuid@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.1.0.tgz#3dd3d3e790abc24d7b0d3a034ffababe28ebbc04"
@@ -2676,6 +2851,10 @@ with@~4.0.0:
   dependencies:
     acorn "^1.0.1"
     acorn-globals "^1.0.3"
+
+word-wrap@^1.1.0:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/word-wrap/-/word-wrap-1.2.3.tgz#610636f6b1f703891bd34771ccb17fb93b47079c"
 
 wordwrap@~0.0.2:
   version "0.0.3"
