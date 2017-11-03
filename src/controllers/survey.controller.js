@@ -2,9 +2,14 @@ import Survey from '../models/survey';
 
 export const getSurvey = async (req, res) => {
   try {
-    const {user} = req;
+    const {
+      query: {id},
+      user
+    } = req;
 
-    const survey = await Survey.findOne({userId: user._id});
+    const searchQuery = id ? {_id: id} : {userId: user._id};
+    const survey = await Survey.findOne(searchQuery);
+
     res.json({survey: survey});
 
   } catch (err) {
