@@ -1,5 +1,4 @@
 import _ from 'lodash';
-import util from 'util';
 import update from 'immutability-helper';
 import Survey from '../models/survey';
 
