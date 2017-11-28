@@ -4,15 +4,22 @@ import Survey from '../models/survey';
 
 export const getSurvey = async (req, res) => {
   try {
-    const {
-      query: {id},
-      user
-    } = req;
+    const {user} = req;
+    const survey = await Survey.findOne({userId: user._id});
 
-    const searchQuery = id ? {_id: id} : {userId: user._id};
-    const survey = await Survey.findOne(searchQuery);
+    res.json({survey});
 
-    res.json({survey: survey});
+  } catch (err) {
+    res.status(500).send(err);
+  }
+};
+
+export const getSurveyById = async (req, res) => {
+  try {
+    const {id} = req.params;
+    const survey = await Survey.findOne({_id: id});
+
+    res.json({survey});
 
   } catch (err) {
     res.status(500).send(err);
