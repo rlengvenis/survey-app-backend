@@ -20,7 +20,7 @@ export default async () => {
           answerText: 'Rokas'
         }]
       }, {
-        title: 'Experience with react?',
+        title: 'Experience with React.js?',
         type: 3,
         answerOptions: [{
           title: '1 years'
