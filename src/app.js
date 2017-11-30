@@ -24,8 +24,10 @@ mongoose.connect(databaseConfig.mongoURL, (error) => {
     throw error;
   }
 
-  // feed some dummy data in DB.
-  dummyData();
+  // feed some dummy data in DB. only for development purposes
+  if (app.get('env') === 'development') {
+    dummyData();
+  }
 });
 
 const app = express();

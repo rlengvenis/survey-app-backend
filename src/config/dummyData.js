@@ -1,37 +1,53 @@
 import Survey from '../models/survey';
+import User from '../models/user';
 
-export default () => {
-  Survey.count().exec((err, count) => {
+export default async () => {
+  try {
+    const count = await Survey.count();
+
     if (count > 0) {
       return;
     }
 
-    const data = {
-      name: 'Apklausa',
-      description: 'Apie save patį',
+    const survey = {
+      name: 'Test survey',
+      description: 'Survey for test purposes',
       questions: [{
-        title: 'Kokia mano lytis?',
+        title: 'What is your name?',
         type: 1,
-        options: []
+        answerOptions: [],
+        answers: [{
+          answerText: 'Rokas'
+        }]
       }, {
-        title: 'Kiek man metų?',
+        title: 'Experience with react?',
         type: 3,
         answerOptions: [{
-          title: '2 metai'
+          title: '1 years'
         }, {
-          title: '3 metai'
+          title: '2 years'
+        }, {
+          title: '3 years'
         }],
         answers: [{
-          answerText: 'Vyras'
+          answerText: '2 years'
         }]
-      }]
+      }],
+      userId: '5691ecd0-d5aa-11e7-8331-037cdb37e4f2'
     };
 
-    Survey.create(data, (error) => {
-      console.log('error', error);
-      if (!error) {
-        console.log('ready to go....');
-      }
-    });
-  });
+    const user = {
+      _id : '5691ecd0-d5aa-11e7-8331-037cdb37e4f2',
+      email: 'test@test.com',
+      password: 'test'
+    };
+
+    await Survey.create(survey);
+    await User.create(user);
+
+    console.log('Dummy data added successfully');
+
+  } catch (error) {
+    console.log('error', error);
+  }
 }
