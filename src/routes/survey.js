@@ -9,8 +9,8 @@ const jwtAuthMiddleware = passport.authenticate('jwt', {session: false});
 
 
 router.route('/survey').get(jwtAuthMiddleware, SurveyController.getSurvey);
-router.route('/surveyById/:id').get(SurveyController.getSurveyById);
 router.route('/survey').put(jwtAuthMiddleware, SurveyController.insertOrUpdateSurvey);
+router.route('/surveyById/:id').get(SurveyController.getSurveyById);
 router.route('/answers').put(SurveyController.updateSurveyWithAnswers);
 
 
