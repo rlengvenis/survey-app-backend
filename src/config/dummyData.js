@@ -239,11 +239,11 @@ export default async () => {
           "type": 3,
           "answers": [
             {
-              "answerText": "Employed full-time",
+              "answerText": "Full-time",
               "_id": "920fff0e-5d44-4af6-a43f-69c80d3c8980"
             },
             {
-              "answerText": "Employed part-time",
+              "answerText": "Part-time",
               "_id": "215585fb-1e4b-4ac9-861c-a04f8e4d9d65"
             },
             {
@@ -251,7 +251,7 @@ export default async () => {
               "_id": "ecdad6e8-4ba4-45bb-bcb3-fd2db7d4c448"
             },
             {
-              "answerText": "Employed full-time",
+              "answerText": "Full-time",
               "_id": "ee308947-670c-4026-b0cf-2e7f00bfdf69"
             },
             {
@@ -259,12 +259,12 @@ export default async () => {
               "_id": "f3d5fb9a-031a-421d-80ff-8f6611b9fa36"
             },
             {
-              "answerText": "Employed full-time",
+              "answerText": "Full-time",
               "_id": "15064fc1-fcde-469e-a15c-fe997e0fc4ad"
             },
             {
               "_id": "e07db647-3eb5-4849-b253-58d50938638e",
-              "answerText": "Employed full-time"
+              "answerText": "Full-time"
             },
             {
               "_id": "5c9a3f0d-f3cf-4329-9c71-8877a83f7e86",
@@ -278,11 +278,11 @@ export default async () => {
           "answerOptions": [
             {
               "_id": "a0c246d6-6934-4156-96bb-d166fd97159e",
-              "title": "Employed full-time"
+              "title": "Full-time"
             },
             {
               "_id": "1038b73e-e073-4822-94f6-a07ad5fa7acf",
-              "title": "Employed part-time"
+              "title": "Part-time"
             },
             {
               "_id": "86b627e2-eae3-4d98-b2f2-aecf0e46a379",
