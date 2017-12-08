@@ -305,7 +305,7 @@ export default async () => {
     const user = {
       "_id" : "6d96dd50-d8c5-11e7-af12-137c45c9ba6d",
       "email" : "demo@demo.com",
-      "password" : "$2a$10$CNmjfIPJgI80VdOKOGOe3OhS8/kryPE1svl7k4Tpob94Su33YYsMy",
+      "password" : "demo",
       "__v" : 0
     };
 
