@@ -1,5 +1,5 @@
 import {Router} from 'express';
-import passport from '../config/passport';
+import passport from '../services/passport';
 import * as AuthenticationController from '../controllers/auth.controller';
 
 

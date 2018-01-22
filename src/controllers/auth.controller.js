@@ -1,5 +1,5 @@
 import jwt from 'jwt-simple'
-import {JWT_SECRET} from '../config/passport';
+import {JWT_SECRET} from '../services/passport';
 import User from '../models/user';
 
 const tokenForUser = (user) => {

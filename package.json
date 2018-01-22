@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "babel-node": "babel-node --presets env",
-    "dev": "nodemon --exec npm run babel-node -- ./bin/www"
+    "start": "nodemon --exec npm run babel-node -- ./bin/www"
   },
   "dependencies": {
+    "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "bcrypt-nodejs": "^0.0.3",
     "body-parser": "~1.18.2",
