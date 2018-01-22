@@ -2,6 +2,8 @@
 
 Survey app backend implementation written with [node.js](https://nodejs.org/en/).
 
+Related to: [survey-frontend](https://github.com/RokasLeng/survey-app-frontend)
+
 ## Demo
 
 Live demo: [survey-app.lengvenis.me](http://survey-app.lengvenis.me)
@@ -31,9 +33,6 @@ Start development version:
 ```sh
 yarn start
 ```
-
-
->Note: This application is used by [survey-frontend](https://github.com/RokasLeng/survey-app-frontend).
 
 ## Design notes
 
