@@ -53,7 +53,7 @@ Configuration structure is copied from [MERN starter](https://github.com/Hashnod
 | Feature | Status | References |
 |:---|:---|:---|
 | Passport.js support | DONE | [www.passportjs.org](http://www.passportjs.org/)|
-| Async/await presets | DONE | [MDN async functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) |
+| Async/await presets | DONE | [MDN Async Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) |
 | CORS support | DONE | [MDN Cross Origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) |
 | Error handling | DONE ||
 | ES6 imports | DONE ||
