@@ -18,10 +18,9 @@ export const localLogin = new LocalStrategy({
         const isMatch = await user.comparePasswords(password);
 
         if (isMatch) {
-          done(null, user);
+          return done(null, user);
         }
       }
-
       return done(null, false);
 
     } catch (err) {
@@ -39,10 +38,10 @@ export const jwtLogin = new Strategy({
       const user = await User.findById(payload.sub);
 
       if (user) {
-        done(null, user);
-      } else {
-        done(null, false);
+        return done(null, user);
       }
+
+      return done(null, false);
 
     } catch (err) {
       console.log(err);

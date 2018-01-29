@@ -26,7 +26,7 @@ mongoose.connect(databaseConfig.mongoURL, (error) => {
 
   // feed some dummy data in DB. only for development purposes
   if (app.get('env') === 'development') {
-    dummyData();
+    dummyData.init();
   }
 });
 

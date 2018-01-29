@@ -1,6 +1,9 @@
 import jwt from 'jwt-simple'
+
 import {JWT_SECRET} from '../services/passport';
 import User from '../models/user';
+import dummyData from '../config/dummyData';
+import Survey from '../models/survey';
 
 const tokenForUser = (user) => {
   return jwt.encode({
@@ -9,7 +12,7 @@ const tokenForUser = (user) => {
   }, JWT_SECRET);
 };
 
-export const signUp = async (req, res, next) => {
+export const signUp = async (req, res) => {
   try {
     const {email, password} = req.body;
 
@@ -35,11 +38,24 @@ export const signUp = async (req, res, next) => {
     })
 
   } catch (err) {
-    next(err);
+    return res.status(500).send({error: err});
   }
 };
 
-export const signIn = (req, res, next) => {
+export const signIn = async (req, res) => {
+  const user = req.user;
+
+  // In case of demo account - reset data each login
+  if (user.email === 'demo@demo.com') {
+    try {
+      const survey = dummyData.survey;
+      await Survey.findOneAndUpdate({_id: survey._id}, survey, {upsert: true});
+
+    } catch (err) {
+      return res.status(500).send({error: err});
+    }
+  }
+
   res.send({
     token: tokenForUser(req.user)
   });
