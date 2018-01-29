@@ -8,9 +8,6 @@ Related to: [survey-frontend](https://github.com/RokasLeng/survey-app-frontend)
 
 Live demo: [survey-app.lengvenis.me](http://survey-app.lengvenis.me)
 
-* Username: demo@demo.com
-* Password: demo
-
 ## Scripts
 
 Install MongoDB database from [documentation](https://docs.mongodb.com/manual/tutorial/install-mongodb-enterprise-on-os-x/)
